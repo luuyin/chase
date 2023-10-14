@@ -1,0 +1,33 @@
+cd ..
+model=resnet50
+name=Imagenet_resnet50
+cycle=2
+total_epochs=100
+stop_dst_epochs=20
+stop_gmp_epochs=80
+density=0.1
+data=/path/to/imagenet/
+python $1multiproc.py --nproc_per_node 4 $main.py --sparse --sparse-init ERK \
+        --minumum_ratio 0.2 \
+        --mest \
+        --mest_dst \
+        --filter_dst \
+        --mag_wise \
+        --cosine_lr \
+        --stop_dst_epochs $stop_dst_epochs --stop_gmp_epochs $stop_gmp_epochs\
+        --layer_interval 2 --start_layer_rate 0.4  \
+        --prune-rate 0.05 \
+        --first_m 30 --second_m 60 --third_m 85 \
+        --method DST --init-prune-epoch 0 --final-prune-epoch 30 --init-density $density  --final-density $density  \
+        --multiplier 1  --seed 17 --master_port 8020 -j72 -p 500 --arch $model -c fanin \
+        --update-frequency 1000 --label_smoothing 0.1 -b 128 --lr 0.512 \
+        --warmup 8 --density $density  $2 $data --total_epochs $total_epochs  \
+        --indicate_method $name 
+
+
+
+
+
+
+
+
