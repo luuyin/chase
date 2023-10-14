@@ -1,4 +1,4 @@
-#  [Dynamic Sparsity Is Channel-Level Sparsity Learner](https://arxiv.org/pdf/2305.19454.pdf)
+#  [Dynamic Sparsity Is Channel-Level Sparsity Learner [Neurips 2023]](https://arxiv.org/pdf/2305.19454.pdf) 
 
 Official PyTorch implementation of  **Chase**: Dynamic Sparsity Is Channel-Level Sparsity Learner
 
