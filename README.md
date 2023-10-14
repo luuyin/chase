@@ -1,6 +1,6 @@
 #  [Dynamic Sparsity Is Channel-Level Sparsity Learner](https://arxiv.org/pdf/2305.19454.pdf)
 
-Official PyTorch implementation of  **OWL**: A Missing Secret Sauce for Pruning LLMs to High Sparsity
+Official PyTorch implementation of  **Chase**: Dynamic Sparsity Is Channel-Level Sparsity Learner
 
 [Lu Yin](https://luuyin.com//), [Gen Li](https://scholar.google.com/citations?user=4nzCXV8AAAAJ), [Meng Fang](https://mengf1.github.io/), [Li Shen](https://scholar.google.com/citations?user=yVhgENIAAAAJ), [Tianjin Huang](https://tienjinhuang.github.io/),  [Zhangyang Wang](https://vita-group.github.io/),[Vlado Menkovsk](https://www.tue.nl/en/research/researchers/vlado-menkovski),[Xiaolong Ma](https://xiaolongma2016.com/),  [Mykola Pechenizkiy](https://www.tue.nl/en/research/researchers/mykola-pechenizkiy), [Shiwei Liu](https://shiweiliuiiiiiii.github.io/)
 
@@ -34,7 +34,7 @@ In this paper, we propose **Ch**annel-**a**ware dynamic **s**pars**e** (**Chase*
 --- 
 
 <p align="center">
-<img src="./Images/ImageNet_inference.png" width="480" height="200">
+<img src="./Images/ImageNet_inference.png" width="680" height="300">
 </p>
 
 <p style="text-align: center;"><i>Real inference latency and throughput of various DST approaches with the ResNet50/ImageNet benchmark. The sparsity level is 90% for all approaches. In the lines representing Chase and Chase (prune skip), each dot corresponds to a model with distinct channel-wise sparsity</i></p>
